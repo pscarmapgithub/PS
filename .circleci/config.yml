@@ -15,7 +15,9 @@ jobs:
     - run:
         name: Get all dependencies
         command: |
-          go mod download all
+          go get -v ./...
+          go get -u github.com/onsi/ginkgo/ginkgo
+          go get -u github.com/onsi/gomega/...
     - run:
         name: Test everything
         command: ginkgo -r -race -failFast -progress
