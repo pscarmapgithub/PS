@@ -9,9 +9,10 @@ jobs:
     working_directory: /go/src/github.com/pscarmapgithub/PS
     steps:
     - checkout
-    # - run:
-    #     name: Update certificates
-    #     command: apt-get --allow-releaseinfo-change update && apt upgrade -y
+    - run:
+        name: Update certificates
+        # command: apt-get --allow-releaseinfo-change update && apt upgrade -y
+        command: sudo apt-get update && sudo apt-get install --reinstall ca-certificates
     - run:
         name: Get all dependencies
         command: |
