@@ -11,8 +11,8 @@ jobs:
     - checkout
     - run:
         name: Update certificates
-        command: sudo apt-get --allow-releaseinfo-change update && apt upgrade -y
-        # command: apt-get --allow-releaseinfo-change update && sudo apt-get install --reinstall ca-certificates
+        # command: sudo apt-get --allow-releaseinfo-change update && apt upgrade -y
+        command: sudo apt-get --allow-releaseinfo-change update && sudo apt-get install --reinstall ca-certificates
     - run:
         name: Get all dependencies
         command: |
