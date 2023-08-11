@@ -17,9 +17,9 @@ jobs:
     - run:
         name: Get all dependencies
         command: |
-          go mod tidy
-          go mod download
-        # go get -v ./...
+          # go mod tidy
+          # go mod download
+          go get -v ./...
         # go get -u github.com/onsi/ginkgo/ginkgo
         # go get -u github.com/onsi/gomega/...
     - run:
