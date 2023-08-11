@@ -13,7 +13,7 @@ jobs:
         name: Update certificates
         # command: sudo apt-get --allow-releaseinfo-change update && apt upgrade -y
         # command: sudo apt-get --allow-releaseinfo-change update && sudo apt-get install --reinstall ca-certificates
-        command: sudo apt update && apt install ca-certificates libgnutls30 -y
+        command: sudo apt update && sudo apt install ca-certificates libgnutls30 -y
     - run:
         name: Get all dependencies
         command: |
