@@ -20,7 +20,7 @@ jobs:
           # go mod tidy
           # go mod download
           go get -v ./...
-        # go get -u github.com/onsi/ginkgo/ginkgo
+          go get -u github.com/onsi/ginkgo/ginkgo
         # go get -u github.com/onsi/gomega/...
     - run:
         name: Test everything
