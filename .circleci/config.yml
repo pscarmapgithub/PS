@@ -19,7 +19,8 @@ jobs:
         command: |
           go get -v ./...
           go get -u github.com/onsi/ginkgo/ginkgo
-          go get -u github.com/onsi/gomega/...
+          # go get -u github.com/onsi/gomega/...
+          go get -u github.com/onsi/gomega@v1.17.0
     - run:
         name: Test everything
         command: ginkgo -r -race -failFast -progress
