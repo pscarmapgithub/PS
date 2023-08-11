@@ -9,16 +9,16 @@ jobs:
     working_directory: /go/src/github.com/pscarmapgithub/PS
     steps:
     - checkout
+    # - run:
+    #     name: Update certificates
+    #     command: apt-get --allow-releaseinfo-change update && apt upgrade -y
     - run:
-        name: Update certificates
-        command: apt-get --allow-releaseinfo-change update && apt upgrade -y
-    # - run:
-    #     name: Get all dependencies
-    #     command: |
-    #       go mod download all
-    # - run:
-    #     name: Test everything
-    #     command: ginkgo -r -race -failFast -progress
+        name: Get all dependencies
+        command: |
+          go mod download all
+    - run:
+        name: Test everything
+        command: ginkgo -r -race -failFast -progress
     # - setup_remote_docker:
     #     docker_layer_caching: true
     # - run:
