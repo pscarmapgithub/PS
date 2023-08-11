@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-IMAGE_PREFIX='g1g1'
+IMAGE_PREFIX='ps'
 STABLE_TAG='0.7'
 
 TAG="${STABLE_TAG}.${CIRCLE_BUILD_NUM}"
@@ -15,7 +15,7 @@ for svc in *; do
     if [[ ! -f Dockerfile ]]; then
         continue
     fi
-    UNTAGGED_IMAGE=$(echo "${IMAGE_PREFIX}/delinkcious-${svc}" | sed -e 's/_/-/g' -e 's/-service//g')
+    UNTAGGED_IMAGE=$(echo "${IMAGE_PREFIX}/ps-${svc}" | sed -e 's/_/-/g' -e 's/-service//g')
     STABLE_IMAGE="${UNTAGGED_IMAGE}:${STABLE_TAG}"
     IMAGE="${UNTAGGED_IMAGE}:${TAG}"
     echo "image: $IMAGE"
