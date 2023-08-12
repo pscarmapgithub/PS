@@ -1,5 +1,4 @@
-module github.com/the-gigi/delinkcious
-
+module github.com/pscarmapgithub/PS
 go 1.17
 
 require (

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: social-graph-manager
-        image: g1g1/delinkcious-social-graph:0.3
+        image: g1g1/ps-social-graph:0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 9090
@@ -28,7 +28,7 @@ spec:
             name: social-graph-manager-config
         volumeMounts:
         - name: mutual-auth
-          mountPath: /etc/delinkcious
+          mountPath: /etc/ps
           readOnly: true
         resources:
           requests:

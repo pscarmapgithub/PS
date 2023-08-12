@@ -16,6 +16,8 @@ jobs:
         name: Get all dependencies
         command: |
           go get -v ./...
+          go get -u github.com/go-kit/kit
+          go get -u github.com/gorilla/mux
           go get -u github.com/onsi/ginkgo/ginkgo
           # go get -u github.com/onsi/gomega/...
           go get -u github.com/onsi/gomega@v1.17.0

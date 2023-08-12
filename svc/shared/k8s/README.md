@@ -11,5 +11,5 @@ $ ./bootstrap.sh
 It will do the following:
 
 - Install ArgoCD
-- Add all the Delinkcious services
+- Add all the Ps services
 - Install NATS

@@ -1,7 +1,7 @@
 package news_manager
 
 import (
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	om "github.com/pscarmapgithub/PS/pkg/object_model"
 )
 
 type Store interface {

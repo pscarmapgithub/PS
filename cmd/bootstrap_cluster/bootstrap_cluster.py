@@ -1,4 +1,4 @@
-"""Bootstrap the Delinkcious Kubernetes cluster
+"""Bootstrap the Ps Kubernetes cluster
 
 
 Pre-requisites:
@@ -277,12 +277,12 @@ def sync_app(name):
     print(output)
 
 
-def deploy_delinkcious_services():
+def deploy_ps_services():
     argocd_login()
     project = 'default'
     ns = 'default'
     description = 'Delicious-like link management system'
-    repo = 'https://github.com/the-gigi/delinkcious'
+    repo = 'https://github.com/pscarmapgithub/PS'
     # create_project(project, 'https://kubernetes.default.svc', ns, '', repo)
     apps = 'link social-graph user news api-gateway'.split()
     #apps = ['api-gateway']
@@ -317,7 +317,7 @@ def main():
     common_components = (
         install_nats,
         install_argocd,
-        deploy_delinkcious_services,
+        deploy_ps_services,
     )
 
     platform_components = dict(

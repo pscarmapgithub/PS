@@ -1,4 +1,4 @@
-export DELINKCIOUS_MUTUAL_AUTH=false
+export PS_MUTUAL_AUTH=false
 export RUN_LINK_SERVICE=true
 export RUN_SOCIAL_GRAPH_SERVICE=true
 

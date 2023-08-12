@@ -1,19 +1,20 @@
 package auth_util
 
 import (
-	_ "github.com/lib/pq"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"os"
+
+	_ "github.com/lib/pq"
+	"gopkg.in/yaml.v2"
 )
 
-const callersFilename = "/etc/delinkcious/mutual-auth.yaml"
+const callersFilename = "/etc/ps/mutual-auth.yaml"
 
 var callersByName = map[string]string{}
 var callersByToken = map[string][]string{}
 
 func init() {
-	if os.Getenv("DELINKCIOUS_MUTUAL_AUTH") == "false" {
+	if os.Getenv("PS_MUTUAL_AUTH") == "false" {
 		return
 	}
 

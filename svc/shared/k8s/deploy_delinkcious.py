@@ -59,12 +59,12 @@ def sync_app(name):
     print(output)
 
 
-def deploy_delinkcious_services():
+def deploy_ps_services():
     login()
     project = 'default'
     ns = 'default'
     description = 'Delicious-like link management system'
-    repo = 'https://github.com/the-gigi/delinkcious'
+    repo = 'https://github.com/pscarmapgithub/PS'
     # create_project(project, 'https://kubernetes.default.svc', ns, '', repo)
     for app in 'link social-graph user news api-gateway'.split():
         service = app.replace('-', '_') + '_service'
@@ -73,4 +73,4 @@ def deploy_delinkcious_services():
 
 
 if __name__ == '__main__':
-    deploy_delinkcious_services()
+    deploy_ps_services()

@@ -10,22 +10,22 @@ metadata:
   name: api-gateway
   labels:
     svc: api-gateway
-    app: delinkcious
+    app: ps
 spec:
   replicas: 1
   selector:
     matchLabels:
       svc: api-gateway
-      app: delinkcious
+      app: ps
   template:
     metadata:
       labels:
         svc: api-gateway
-        app: delinkcious
+        app: ps
     spec:
       containers:
       - name: api-gateway
-        image: g1g1/delinkcious-api-gateway:0.5
+        image: g1g1/ps-api-gateway:0.5
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
@@ -55,4 +55,4 @@ spec:
     targetPort: 5000
   selector:
     svc: api-gateway
-    app: delinkcious
+    app: ps

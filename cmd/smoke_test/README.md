@@ -1,4 +1,4 @@
-# Delinkcious smoke test
+# Ps smoke test
 
 Make sure your local minikube cluster is running then...
 

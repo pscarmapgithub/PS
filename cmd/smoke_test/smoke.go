@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
-	. "github.com/the-gigi/delinkcious/pkg/test_util"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -14,19 +12,22 @@ import (
 	"os/exec"
 	"strings"
 	"time"
+
+	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	. "github.com/pscarmapgithub/PS/pkg/test_util"
 )
 
 var (
-	delinkciousUrl   string
-	delinkciousToken = os.Getenv("DELINKCIOUS_TOKEN")
-	httpClient       = http.Client{}
+	psUrl      string
+	psToken    = os.Getenv("PS_TOKEN")
+	httpClient = http.Client{}
 )
 
 func getLinks() {
-	req, err := http.NewRequest("GET", string(delinkciousUrl)+"/links", nil)
+	req, err := http.NewRequest("GET", string(psUrl)+"/links", nil)
 	Check(err)
 
-	req.Header.Add("Access-Token", delinkciousToken)
+	req.Header.Add("Access-Token", psToken)
 	r, err := httpClient.Do(req)
 	Check(err)
 
@@ -52,10 +53,10 @@ func getLinks() {
 }
 
 func getFollowing() {
-	req, err := http.NewRequest("GET", string(delinkciousUrl)+"/following", nil)
+	req, err := http.NewRequest("GET", string(psUrl)+"/following", nil)
 	Check(err)
 
-	req.Header.Add("Access-Token", delinkciousToken)
+	req.Header.Add("Access-Token", psToken)
 	r, err := httpClient.Do(req)
 	Check(err)
 
@@ -72,7 +73,6 @@ func getFollowing() {
 	log.Println(string(body))
 }
 
-
 func addLink(url string, title string) {
 	params := net_url.Values{}
 	params.Add("url", url)
@@ -82,11 +82,11 @@ func addLink(url string, title string) {
 	log.Println("===== Add Link ======")
 	log.Println(fmt.Sprintf("Adding new link - title: '%s', url: '%s'", title, url))
 
-	url = fmt.Sprintf("%s/links?%s", delinkciousUrl, qs)
+	url = fmt.Sprintf("%s/links?%s", psUrl, qs)
 	req, err := http.NewRequest("POST", url, nil)
 	Check(err)
 
-	req.Header.Add("Access-Token", delinkciousToken)
+	req.Header.Add("Access-Token", psToken)
 	r, err := httpClient.Do(req)
 	Check(err)
 	if r.StatusCode != http.StatusOK {
@@ -103,11 +103,11 @@ func deleteLink(url string) {
 	params.Add("url", url)
 	qs := params.Encode()
 
-	url = fmt.Sprintf("%s/links?%s", delinkciousUrl, qs)
+	url = fmt.Sprintf("%s/links?%s", psUrl, qs)
 	req, err := http.NewRequest("DELETE", url, nil)
 	Check(err)
 
-	req.Header.Add("Access-Token", delinkciousToken)
+	req.Header.Add("Access-Token", psToken)
 	r, err := httpClient.Do(req)
 	Check(err)
 	if r.StatusCode != http.StatusOK {
@@ -154,13 +154,12 @@ func main() {
 	//	tempUrl = []byte("http://localhost:5000/")
 	//}
 
-
-	delinkciousUrl = string(tempUrl[:len(tempUrl)-1]) + "/v1"
-	if !strings.HasPrefix(delinkciousUrl, "http") {
-		delinkciousUrl = "http://" + delinkciousUrl[1:]
+	psUrl = string(tempUrl[:len(tempUrl)-1]) + "/v1"
+	if !strings.HasPrefix(psUrl, "http") {
+		psUrl = "http://" + psUrl[1:]
 	}
 
-	fmt.Printf("url: '%s'\n", delinkciousUrl)
+	fmt.Printf("url: '%s'\n", psUrl)
 
 	// Get following
 	getFollowing()

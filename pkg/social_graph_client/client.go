@@ -4,14 +4,15 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	httptransport "github.com/go-kit/kit/transport/http"
-	"github.com/the-gigi/delinkcious/pkg/auth_util"
-	om "github.com/the-gigi/delinkcious/pkg/object_model"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"os"
 	"strings"
+
+	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/pscarmapgithub/PS/pkg/auth_util"
+	om "github.com/pscarmapgithub/PS/pkg/object_model"
 )
 
 const SERVICE_NAME = "social-graph-manager"
@@ -76,9 +77,9 @@ func encodeHTTPGenericRequest(_ context.Context, r *http.Request, request interf
 	}
 	r.Body = ioutil.NopCloser(&buf)
 
-	if os.Getenv("DELINKCIOUS_MUTUAL_AUTH") != "false" {
+	if os.Getenv("PS_MUTUAL_AUTH") != "false" {
 		token := auth_util.GetToken(SERVICE_NAME)
-		r.Header["Delinkcious-Caller-Token"] = []string{token}
+		r.Header["Ps-Caller-Token"] = []string{token}
 	}
 
 	return nil

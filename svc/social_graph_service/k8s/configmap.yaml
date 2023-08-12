@@ -4,6 +4,6 @@ metadata:
   name: social-graph-manager-config
   namespace: default
 data:
-  DELINKCIOUS_MUTUAL_AUTH: "false"
+  PS_MUTUAL_AUTH: "false"
 
 
