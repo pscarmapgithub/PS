@@ -1,4 +1,5 @@
-module github.com/pscarmapgithub/PS/svc/news_service
+//module github.com/pscarmapgithub/PS/svc/news_service
+module github.com/the-gigi/delinkcious/svc/news_service
 
 go 1.17
 
