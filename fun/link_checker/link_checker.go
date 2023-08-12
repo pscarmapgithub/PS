@@ -6,9 +6,9 @@ import (
 	"fmt"
 
 	"github.com/nuclio/nuclio-sdk-go"
-	"github.com/pscarmapgithub/PS/pkg/link_checker"
-	"github.com/pscarmapgithub/PS/pkg/link_checker_events"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/link_checker"
+	"github.com/the-gigi/delinkcious/pkg/link_checker_events"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 const natsUrl = "nats-cluster.default.svc.cluster.local:4222"

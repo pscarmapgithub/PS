@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/pscarmapgithub/PS/pkg/link_manager_events"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/link_manager_events"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 type NewsManager struct {

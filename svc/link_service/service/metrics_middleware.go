@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/pscarmapgithub/PS/pkg/metrics"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/metrics"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 // implement function to return ServiceMiddleware

@@ -7,8 +7,8 @@ import (
 
 	httptransport "github.com/go-kit/kit/transport/http"
 	"github.com/gorilla/mux"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	sgm "github.com/pscarmapgithub/PS/pkg/social_graph_manager"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	sgm "github.com/the-gigi/delinkcious/pkg/social_graph_manager"
 )
 
 func check(err error) {

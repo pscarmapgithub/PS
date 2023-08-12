@@ -6,8 +6,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/pscarmapgithub/PS/pkg/link_checker_events"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/link_checker_events"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 // Nuclio functions listen by default on port 8080 of their service IP

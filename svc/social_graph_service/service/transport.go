@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/go-kit/kit/endpoint"
-	"github.com/pscarmapgithub/PS/pkg/auth_util"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/auth_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 type followRequest struct {

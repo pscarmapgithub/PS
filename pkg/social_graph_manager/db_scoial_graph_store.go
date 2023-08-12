@@ -6,7 +6,7 @@ import (
 
 	sq "github.com/Masterminds/squirrel"
 	_ "github.com/lib/pq"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
 )
 
 type DbSocialGraphStore struct {

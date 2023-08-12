@@ -18,10 +18,10 @@ import (
 	"os"
 
 	/// _ "github.com/lib/pq"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	"github.com/pscarmapgithub/PS/pkg/link_manager_client"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
-	. "github.com/pscarmapgithub/PS/pkg/test_util"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	"github.com/the-gigi/delinkcious/pkg/link_manager_client"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	. "github.com/the-gigi/delinkcious/pkg/test_util"
 )
 */
 

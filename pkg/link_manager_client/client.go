@@ -11,7 +11,7 @@ import (
 
 	httptransport "github.com/go-kit/kit/transport/http"
 
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 func NewClient(baseURL string) (om.LinkManager, error) {

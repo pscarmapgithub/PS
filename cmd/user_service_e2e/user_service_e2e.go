@@ -5,10 +5,10 @@ import (
 	"log"
 
 	_ "github.com/lib/pq"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
-	. "github.com/pscarmapgithub/PS/pkg/test_util"
-	"github.com/pscarmapgithub/PS/pkg/user_client"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	. "github.com/the-gigi/delinkcious/pkg/test_util"
+	"github.com/the-gigi/delinkcious/pkg/user_client"
 )
 
 func check(err error) {

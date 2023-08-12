@@ -6,10 +6,10 @@ import (
 	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
 
 	httptransport "github.com/go-kit/kit/transport/http"
-	sgm "github.com/pscarmapgithub/PS/pkg/user_manager"
+	sgm "github.com/the-gigi/delinkcious/pkg/user_manager"
 )
 
 func Run() {

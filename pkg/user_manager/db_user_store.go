@@ -7,8 +7,8 @@ import (
 
 	sq "github.com/Masterminds/squirrel"
 	_ "github.com/lib/pq"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 type DbUserStore struct {

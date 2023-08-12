@@ -5,9 +5,9 @@ import (
 	"log"
 
 	_ "github.com/lib/pq"
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	"github.com/pscarmapgithub/PS/pkg/social_graph_client"
-	. "github.com/pscarmapgithub/PS/pkg/test_util"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	"github.com/the-gigi/delinkcious/pkg/social_graph_client"
+	. "github.com/the-gigi/delinkcious/pkg/test_util"
 )
 
 func check(err error) {

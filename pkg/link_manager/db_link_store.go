@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/pscarmapgithub/PS/pkg/db_util"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 
 	"database/sql"
 

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/go-kit/kit/log"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 // implement function to return ServiceMiddleware

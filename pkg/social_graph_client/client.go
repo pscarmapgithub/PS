@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	httptransport "github.com/go-kit/kit/transport/http"
-	"github.com/pscarmapgithub/PS/pkg/auth_util"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pkg/auth_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 const SERVICE_NAME = "social-graph-manager"

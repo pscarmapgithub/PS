@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
-	. "github.com/pscarmapgithub/PS/pkg/test_util"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	. "github.com/the-gigi/delinkcious/pkg/test_util"
 )
 
 var (

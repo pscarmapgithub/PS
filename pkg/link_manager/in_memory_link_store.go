@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"time"
 
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 // User links are a map of url:TaggedLink

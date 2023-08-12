@@ -6,8 +6,8 @@ import (
 	"github.com/go-kit/kit/endpoint"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/pscarmapgithub/PS/pb/news_service/pb"
-	om "github.com/pscarmapgithub/PS/pkg/object_model"
+	"github.com/the-gigi/delinkcious/pb/news_service/pb"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
 )
 
 func newEvent(e *om.LinkManagerEvent) (event *pb.Event) {
