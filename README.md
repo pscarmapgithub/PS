@@ -1,56 +1,39 @@
-# Delinkcious
+# Orb Template
 
-A delicious-like link management platform implemented using Go microservices and deployed on Kubernetes.
+<!---
+[![CircleCI Build Status](https://circleci.com/gh/<organization>/<project-name>.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/<organization>/<project-name>) [![CircleCI Orb Version](https://badges.circleci.com/orbs/<namespace>/<orb-name>.svg)](https://circleci.com/developer/orbs/orb/<namespace>/<orb-name>) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/<organization>/<project-name>/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
-The book [Hands-on Microservices with Kubernetes](https://www.amazon.com/Hands-Microservices-Kubernetes-scalable-microservices/dp/1789805465) describes how it was built from scratch.
+--->
 
-# Directory Structure
+A project template for Orbs.
 
-## pkg
-The core logic is implemented by libraries in this directory
+This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
 
-## svc
+_**Edit this area to include a custom title and description.**_
 
-The microservices are in this directory. They use the excellent [go-kit](https://gokit.io) microservice framework.
+---
 
-## cmd
+## Resources
 
-Various utilities and one-time commands live here
+[CircleCI Orb Registry Page](https://circleci.com/developer/orbs/orb/<namespace>/<orb-name>) - The official registry page of this orb for all versions, executors, commands, and jobs described.
 
-## pb
+[CircleCI Orb Docs](https://circleci.com/docs/orb-intro/#section=configuration) - Docs for using, creating, and publishing CircleCI Orbs.
 
-Stands for protobuf. Contains gRPC contracts and generated code.
+### How to Contribute
 
-## fun
+We welcome [issues](https://github.com/<organization>/<project-name>/issues) to and [pull requests](https://github.com/<organization>/<project-name>/pulls) against this repository!
 
-Serverless functions (Nuclio)
-
-# Unit testing
-
-Go to Delinkcious root directory and type: `ginkgo -r`
-
-You should see something like:
-
-```
-[1556557699] LinkChecker Suite - 2/2 specs •• SUCCESS! 1.57716233s PASS
-[1556557699] LinkManager Suite - 8/8 specs 2019/04/29 10:08:30 DB host: localhost DB port: 5432
-•••••••• SUCCESS! 95.435161ms PASS
-[1556557699] NewsManager Suite - 1/1 specs • SUCCESS! 322.678µs PASS
-[1556557699] SocialGraphManager Suite - 6/6 specs 2019/04/29 10:08:30 DB host: localhost DB port: 5432
-•••••• SUCCESS! 402.274617ms PASS
-[1556557699] UserManager Suite - 6/6 specs 2019/04/29 10:08:31 DB host: localhost DB port: 5432
-•••••• SUCCESS! 396.859071ms PASS
-
-Ginkgo ran 5 suites in 11.589104359s
-Test Suite Passed
-```
-
-# CI/CD
-
-For CI check out the .circleci file and build.sh
-
-See https://circleci.com/gh/the-gigi/delinkcious/tree/master for status
-
-For CD type: `kubectl port-forward -n argocd svc/argocd-server 8080:443`
-
-Then browse to: https://localhost:8080
+### How to Publish An Update
+1. Merge pull requests with desired changes to the main branch.
+    - For the best experience, squash-and-merge and use [Conventional Commit Messages](https://conventionalcommits.org/).
+2. Find the current version of the orb.
+    - You can run `circleci orb info <namespace>/<orb-name> | grep "Latest"` to see the current version.
+3. Create a [new Release](https://github.com/<organization>/<project-name>/releases/new) on GitHub.
+    - Click "Choose a tag" and _create_ a new [semantically versioned](http://semver.org/) tag. (ex: v1.0.0)
+      - We will have an opportunity to change this before we publish if needed after the next step.
+4.  Click _"+ Auto-generate release notes"_.
+    - This will create a summary of all of the merged pull requests since the previous release.
+    - If you have used _[Conventional Commit Messages](https://conventionalcommits.org/)_ it will be easy to determine what types of changes were made, allowing you to ensure the correct version tag is being published.
+5. Now ensure the version tag selected is semantically accurate based on the changes included.
+6. Click _"Publish Release"_.
+    - This will push a new tag and trigger your publishing pipeline on CircleCI.
