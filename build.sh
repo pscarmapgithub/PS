@@ -15,6 +15,7 @@ for svc in *; do
     if [[ ! -f Dockerfile ]]; then
         continue
     fi
+    echo "Path: ${SVC_DIR}/$svc"
     UNTAGGED_IMAGE=$(echo "${IMAGE_PREFIX}/ps-${svc}" | sed -e 's/_/-/g' -e 's/-service//g')
     STABLE_IMAGE="${UNTAGGED_IMAGE}:${STABLE_TAG}"
     IMAGE="${UNTAGGED_IMAGE}:${TAG}"
