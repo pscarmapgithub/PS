@@ -7,7 +7,8 @@ require (
 	github.com/go-kit/kit v0.12.0
 	github.com/golang/protobuf v1.5.2
 	//github.com/pscarmapgithub/PS v0.0.0-20220103094143-701d7f6061e1
-	github.com/the-gigi/delinkcious //v0.0.0-20220103094143-701d7f6061e1
+	//github.com/the-gigi/delinkcious //v0.0.0-20220103094143-701d7f6061e1
+	github.com/the-gigi/delinkcious v0.0.0-20220103094143-701d7f6061e1
 	google.golang.org/grpc v1.43.0
 )
 
