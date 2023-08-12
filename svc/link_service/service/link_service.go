@@ -14,6 +14,29 @@ import (
 	"github.com/uber/jaeger-client-go"
 	jeagerconfig "github.com/uber/jaeger-client-go/config"
 
+	"github.com/the-gigi/delinkcious/pkg/db_util"
+	lm "github.com/the-gigi/delinkcious/pkg/link_manager"
+	"github.com/the-gigi/delinkcious/pkg/link_manager_events"
+	"github.com/the-gigi/delinkcious/pkg/log"
+	om "github.com/the-gigi/delinkcious/pkg/object_model"
+	sgm "github.com/the-gigi/delinkcious/pkg/social_graph_client"
+)
+
+/*
+import (
+	"fmt"
+	"io"
+	"net/http"
+	"os"
+	"strconv"
+
+	httptransport "github.com/go-kit/kit/transport/http"
+	"github.com/gorilla/mux"
+	"github.com/opentracing/opentracing-go"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/uber/jaeger-client-go"
+	jeagerconfig "github.com/uber/jaeger-client-go/config"
+
 	"github.com/pscarmapgithub/PS/pkg/db_util"
 	lm "github.com/pscarmapgithub/PS/pkg/link_manager"
 	"github.com/pscarmapgithub/PS/pkg/link_manager_events"
@@ -21,6 +44,7 @@ import (
 	om "github.com/pscarmapgithub/PS/pkg/object_model"
 	sgm "github.com/pscarmapgithub/PS/pkg/social_graph_client"
 )
+*/
 
 type EventSink struct {
 }
