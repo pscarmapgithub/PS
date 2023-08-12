@@ -11,6 +11,8 @@ RUN apt-get --allow-releaseinfo-change update && apt upgrade -y
 
 # Fetch dependencies
 RUN go mod download all
+###
+RUN go mod tidy
 
 # Build image as a truly static Go binary
 RUN CGO_ENABLED=0 GOOS=linux go build -o /social_graph_service -a -tags netgo -ldflags '-s -w' .
